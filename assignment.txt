@@ -1,0 +1,62 @@
+1. Explain the difference between frontend, backend, and full-stack development with
+suitable real-world examples.
+Ans. Frontend is what users see on a website (buttons, text, images). Technologies: HTML, CSS, JS.
+Example: Product page on Amazon.
+Backend handles server logic, databases, and processing. Technologies: Node.js, Python, PHP.
+Example: Processing Amazon orders.
+Full-stack works on both frontend and backend.
+Example: A developer building the full Amazon website.
+
+2. Create a simple diagram showing how the client-server model works in web architecture.
+Ans. [Client (Browser)] ---> Request ---> [Server] ---> Response ---> [Client]
+
+3. Describe how a browser requests and displays a web page from a web server.
+Ans. When we enter a URL, the browser sends a request to the server.
+The server responds with HTML, CSS, and JS files.
+The browser renders these files to display the webpage for the user.
+
+4. Identify and list the tools required to set up a web development environment. Explain the
+purpose of each.
+Ans. VS Code: Code editor to write and manage code.
+Web Browser (Chrome, Firefox): To test and preview websites.
+Node.js: Allows running JavaScript on the backend.
+Git: Tracks code versions and changes.
+Live Server Extension: Shows real-time changes in browser.
+
+5. Explain what a web server is and give examples of commonly used servers.
+Ans. A web server stores websites and responds to client requests.
+It delivers HTML, CSS, JS, and media files to browsers.
+Examples: Apache, Nginx, Microsoft IIS.
+
+6. Define the roles of a frontend developer, backend developer, and database administrator
+in a project.
+Ans. Frontend Developer: Builds the user interface and layout.
+Backend Developer: Creates server logic, APIs, and manages database connections.
+Database Administrator: Maintains and secures the database, ensures data integrity.
+
+7. Install VS Code and configure it for HTML, CSS, and JavaScript development. Take a
+screenshot of the setup.
+Ans. Install VS Code from the official site.
+Add Live Server extension.
+Create .html, .css, and .js files.
+Open with Live Server to see changes in real-time.
+
+8. Explain the difference between static and dynamic websites. Provide an example of
+each.
+Ans. Static Websites: Content does not change unless manually updated.
+Example: Personal portfolio site.
+Dynamic Websites: Content changes based on user actions or database.
+Example: Facebook or Amazon. 
+
+9. Research and list five web browsers. Explain how rendering engines differ between
+them.
+Ans. Browsers: Chrome, Firefox, Safari, Edge, Opera.
+Rendering engines convert code (HTML/CSS/JS) into visual pages.
+Engines differ: Chrome & Edge use Blink, Firefox uses Gecko, Safari uses WebKit, Opera uses Blink.
+
+10. Draw a labeled diagram showing the basic web architecture flow — client, server,
+database, and APIs.
+Ans. [Client (Browser)] <---> [Server] <---> [Database]
+                 ^                   ^
+                 |                   |
+               [API]  <-------------
