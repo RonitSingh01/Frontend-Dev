@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Contact Form</title>
+    <!-- Load Tailwind CSS for base utilities and quick styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+
+    <div class="contact-card">
+        <h1 class="text-3xl font-extrabold text-center mb-8">Get in Touch</h1>
+        
+        <!-- 1. Semantic Form Structure -->
+        <form action="#" method="POST">
+            
+            <!-- Name Field -->
+            <div class="form-field">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-field">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+            </div>
+            
+            <!-- Subject Field -->
+            <div class="form-field">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="A brief summary of your query" required>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-field">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Type your detailed message here..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-field pt-2">
+                <button type="submit" class="form-button">Send Message</button>
+            </div>
+            
+        </form>
+    </div>
+
+</body>
+</html>

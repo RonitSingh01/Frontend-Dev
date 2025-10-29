@@ -1,0 +1,71 @@
+        /* Base Styles for the Document */
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+        }
+
+        /* Container for readability on large screens */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem; /* Consistent padding using the Box Model */
+            background-color: #fff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        /* 1. Consistent spacing between paragraphs */
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+        }
+
+        /* 2. Style the first letter of each paragraph */
+        p:not(.ignore-style)::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1;
+            color: #4f46e5; /* Indigo color */
+            float: left;
+            margin-right: 8px; /* Box Model: Spacing after the letter */
+            font-weight: 700;
+        }
+
+        /* 3. Make the first line of each paragraph bold */
+        p:not(.ignore-style)::first-line {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        /* 4. Custom styling for marked text */
+        mark {
+            background-color: #fde68a; /* Soft yellow background */
+            padding: 3px 6px; /* Box Model: Small padding */
+            border-radius: 4px;
+            font-weight: 600;
+            color: #78350f; /* Dark text for contrast */
+        }
+
+        /* 5. Emphasize the blockquote section */
+        blockquote {
+            /* Box Model: Padding and margin for internal and external spacing */
+            margin: 32px 0;
+            padding: 16px 24px;
+            
+            /* Highlighting Aesthetics */
+            background-color: #eff6ff; /* Light blue background */
+            border-left: 6px solid #3b82f6; /* Prominent left border (Box Model emphasis) */
+            
+            font-style: italic;
+            color: #1e3a8a;
+            line-height: 1.6;
+        }
+
+        blockquote footer {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #60a5fa;
+            font-weight: 500;
+        }

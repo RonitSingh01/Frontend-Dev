@@ -1,0 +1,91 @@
+      /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            padding: 40px 20px;
+        }
+
+        /* 1 & 3. Grid Container for Responsiveness */
+        .gallery-grid {
+            /* Use CSS Grid for automatic column management */
+            display: grid;
+            
+            /* CRITICAL: Responsive column definition */
+            /* Creates as many 250px wide columns as possible, stretching them equally */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling for the individual gallery item wrapper */
+        .gallery-item {
+            position: relative;
+            overflow: hidden; /* Crucial for clipping image scale and shadows */
+            
+            /* 5. Aesthetics */
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            
+            /* 2. Transition for smooth effects */
+            transition: box-shadow 0.4s ease-out;
+            cursor: pointer;
+            aspect-ratio: 1 / 1; /* Keep items square */
+        }
+
+        /* Image within the item */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            /* 2. Transition for smooth scale */
+            transition: transform 0.4s ease-out;
+            display: block;
+        }
+
+        /* Caption Overlay Styling */
+        .caption-overlay {
+            /* 2. & 5. Caption overlay with position absolute */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+            color: #fff;
+            display: flex;
+            align-items: flex-end; /* Align caption text to the bottom */
+            padding: 15px;
+            
+            /* 2. Hover effect: Start invisible */
+            opacity: 0;
+            transition: opacity 0.4s ease-out;
+            
+            /* Aesthetics */
+            border-radius: 12px;
+            text-align: left;
+        }
+        
+        /* 2. Hover Effects */
+        .gallery-item:hover img {
+            transform: scale(1.1); /* Slightly scale up the image */
+        }
+
+        .gallery-item:hover .caption-overlay {
+            opacity: 1; /* Show the caption overlay */
+        }
+
+        .caption-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            transform: translateY(10px); /* Start slightly off-screen */
+            transition: transform 0.4s ease-out;
+        }
+
+        /* Animate caption text on hover */
+        .gallery-item:hover .caption-text {
+            transform: translateY(0);
+        }

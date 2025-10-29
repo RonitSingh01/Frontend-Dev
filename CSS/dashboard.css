@@ -1,0 +1,128 @@
+
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light background */
+            margin: 0;
+            padding: 0;
+            /* CRITICAL: Space for the fixed header (60px height) */
+            padding-top: 60px; 
+        }
+
+        /* 1. Header Styling (Fixed Position) */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px; /* Header height */
+            background-color: #1e293b; /* Dark Blue Gray */
+            color: white;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Main Layout Container (Holds Sidebar and Content) */
+        .layout-container {
+            /* 4. Use Flexbox for main structure */
+            display: flex;
+            /* 5. Full viewport height minus header */
+            min-height: calc(100vh - 60px); 
+        }
+
+        /* 2. & 5. Sidebar Styling */
+        #sidebar {
+            width: 250px; /* Fixed sidebar width */
+            background-color: #ffffff; /* White background */
+            padding: 20px 0;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+            flex-shrink: 0; /* Prevents sidebar from shrinking */
+        }
+
+        .nav-item {
+            padding: 10px 20px;
+            color: #475569;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.2s;
+        }
+
+        .nav-item:hover {
+            background-color: #f1f5f9;
+            color: #3b82f6;
+        }
+
+        .nav-item.active {
+            background-color: #e0f2f1;
+            color: #0d9488;
+            font-weight: 600;
+            border-right: 3px solid #0d9488;
+        }
+
+        /* 3. Main Content Area */
+        #main-content {
+            flex-grow: 1; /* Takes up all remaining space */
+            padding: 30px;
+            background-color: #f8fafc;
+        }
+
+        .content-grid {
+            /* Use Grid for internal content spacing */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* 6. Even spacing between boxes */
+            gap: 20px;
+        }
+
+        /* 6. Content Box Styling */
+        .content-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            /* 6. Subtle shadows */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* 7. Responsive Layout: Sidebar stacks above content on smaller screens */
+        @media (max-width: 768px) {
+            /* Adjust body padding for smaller header on mobile */
+            body {
+                padding-top: 50px; 
+            }
+            .header {
+                height: 50px;
+            }
+            
+            .layout-container {
+                /* Sidebar stacks above content */
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            #sidebar {
+                width: 100%; /* Sidebar takes full width */
+                height: auto; /* Allow height to adjust naturally (no longer fixed to viewport) */
+                padding: 10px 0;
+            }
+            
+            /* Change nav links to inline flex for horizontal scrolling/wrapping */
+            .nav-menu {
+                display: flex;
+                overflow-x: auto;
+                padding: 0 20px;
+            }
+            
+            .nav-item {
+                flex-shrink: 0; /* Prevents items from squishing */
+                padding: 8px 15px;
+                border-right: none !important; /* Remove vertical border */
+                margin-right: 5px;
+                border-radius: 6px;
+                text-align: center;
+            }
+        }
+

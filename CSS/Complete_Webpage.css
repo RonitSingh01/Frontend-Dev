@@ -1,0 +1,176 @@
+
+        /* Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Reusable Section Padding & Margin (Box Model Mastery) */
+        section {
+            padding: 60px 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        
+        /* 1. Header with Sticky Navigation */
+        .main-header {
+            /* Positioning: Fixed */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95); /* rgba() color */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            padding: 15px 20px; /* Padding applied */
+        }
+        
+        /* Offset content so it's not hidden behind the fixed header */
+        .content-wrapper {
+            padding-top: 70px;
+        }
+
+        /* 2. Hero Section */
+        #hero {
+            /* Positioning: Relative for absolute children */
+            position: relative;
+            height: 80vh; /* Large size */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Gradient overlay */
+                        url('https://placehold.co/1920x800/222/FFF?text=Dynamic+Background') no-repeat center center/cover;
+            color: white;
+            display: flex; /* Centering fallback */
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            padding: 0;
+        }
+        
+        /* Centered Welcome Text (Positioning: Absolute) */
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Precisely centering */
+            text-align: center;
+            padding: 20px;
+            border: 5px solid rgba(255, 255, 255, 0.8); /* Border used */
+            border-radius: 10px;
+            /* Outline used as an extra visual effect */
+            outline: 2px solid rgba(255, 255, 255, 0.4); 
+            outline-offset: 8px;
+        }
+
+        /* 3. About Section (Flexbox for 2 columns) */
+        #about-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        #about-content > div {
+            flex: 1; /* Equal width columns */
+        }
+        
+        .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            /* Positioning: Relative to allow for subtle effects if needed */
+            position: relative; 
+        }
+
+        /* 4. Services Section (Flexbox for 3 columns) */
+        #services-content {
+            display: flex;
+            flex-wrap: wrap; /* Responsive wrap */
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .service-box {
+            flex: 1 1 calc(33.333% - 20px); /* 3 columns with gap */
+            min-width: 250px;
+            background-color: #ffffff;
+            padding: 30px; /* Padding applied */
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 5. Contact Section */
+        #contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-input, .form-textarea {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px; /* Margin applied */
+            border: 1px solid #ccc; /* Border applied */
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #0d9488; /* Primary color highlight */
+        }
+        
+        .submit-btn {
+            background-color: #0d9488;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #047871;
+        }
+
+        /* 6. Footer */
+        .main-footer {
+            background-color: #1f2937;
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0; /* Padding applied */
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #about-content {
+                flex-direction: column; /* Stack columns on smaller screens */
+            }
+            .service-box {
+                /* Two columns on tablets */
+                flex: 1 1 calc(50% - 10px); 
+            }
+            #hero {
+                height: 50vh;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .service-box {
+                /* Single column on mobile */
+                flex: 1 1 100%; 
+            }
+            .article-title {
+                font-size: 2.5rem;
+            }
+        }

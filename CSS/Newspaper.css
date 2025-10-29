@@ -1,0 +1,101 @@
+        /* Base Styles and 6. Background/Padding */
+        body {
+            /* Custom Magazine Font Pairing */
+            font-family: 'Inter', sans-serif;
+            background-color: #e5e7eb; /* Light Gray Background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .magazine-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            /* 6. Padding around the main content area */
+            padding: 30px; 
+        }
+
+        /* 3. Spanning Heading Style */
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 20px;
+            
+            /* 2. Spanning the entire width */
+            column-span: all; 
+            -webkit-column-span: all; /* For older browsers */
+            -moz-column-span: all;
+        }
+        
+        /* Subheading */
+        .article-meta {
+            column-span: all;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #6b7280;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 15px;
+        }
+
+        /* 1. Main Column Structure */
+        .article-content {
+            /* Create three vertical columns */
+            column-count: 3;
+            /* Column spacing */
+            column-gap: 40px; 
+            
+            /* 3. Text justification and custom font styling */
+            text-align: justify;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #374151;
+        }
+
+        .article-content p {
+            /* Ensure clean spacing between paragraphs */
+            margin-top: 0;
+            margin-bottom: 1.5em; 
+        }
+
+        /* 4. Floating Image Style */
+        .floated-image {
+            float: left;
+            width: 200px;
+            height: auto;
+            margin: 0 25px 15px 0;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive Adjustment: Reduce to 2 columns on medium screens and 1 on small screens */
+        @media (max-width: 1024px) {
+            .article-content {
+                column-count: 2;
+                column-gap: 30px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .article-container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            .article-title {
+                font-size: 2.5rem;
+            }
+            .article-content {
+                column-count: 1;
+                column-gap: 0;
+            }
+            .floated-image {
+                width: 100%;
+                float: none;
+                margin: 0 0 20px 0;
+            }
+        }

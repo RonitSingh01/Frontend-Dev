@@ -1,0 +1,120 @@
+/* Reset default margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f5f9;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0b3d91;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2rem;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2em;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Main section */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12vh; /* accounts for fixed header height */
+}
+
+/* Intro section */
+.intro {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    padding: 2em;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0b3d91;
+}
+
+.bio h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    color: #0b3d91;
+}
+
+.bio span {
+    color: #ff9900;
+}
+
+.bio p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+    nav a {
+        margin-left: 1em;
+    }
+}

@@ -1,0 +1,91 @@
+ /* Set base font and body background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+
+        /* The main container for the cards */
+        .team-container {
+            display: flex;
+            /* Flex properties for 3-column layout */
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch; /* Ensures all cards have the same height */
+            gap: 24px; /* Uniform spacing between cards (replaces horizontal margin) */
+            max-width: 1200px;
+            margin: 40px auto; /* Center the container on the page */
+            padding: 16px;
+        }
+
+        /* Base styling for all profile cards */
+        .team-card {
+            /* Box Model: Uniform padding inside the card */
+            padding: 24px;
+            /* Aesthetics */
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+            /* Flex property: Allows card to grow and shrink, ensuring 3 columns */
+            flex: 1 1 30%; /* grow | shrink | basis */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Highlighting the Team Lead card */
+        .team-lead {
+            background-color: #fffbeb; /* Light yellow background */
+            border: 2px solid #f59e0b; /* Bright orange solid border */
+            border-style: dashed; /* Highlight with a dashed border */
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3); /* Stronger shadow with color tint */
+        }
+
+        .team-lead .role {
+            color: #d97706; /* Darker orange text for role */
+            font-weight: 700;
+        }
+
+        .name {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px; /* Box Model: Margin below name */
+        }
+
+        .role {
+            font-size: 1rem; /* 16px */
+            font-weight: 600;
+            color: #4b5563;
+            margin-bottom: 16px; /* Box Model: Margin below role */
+            padding-bottom: 4px; /* Small padding/separation line below role */
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Responsive Layout: Single column for screens under 600px */
+        @media (max-width: 600px) {
+            .team-container {
+                /* Change flex direction to stack cards vertically */
+                flex-direction: column;
+                padding: 10px;
+                margin: 20px auto;
+            }
+
+            .team-card {
+                /* Make each card take the full available width */
+                flex: 1 1 100%;
+                /* Add vertical margin for better spacing when stacked */
+                margin-bottom: 16px;
+            }
+        }

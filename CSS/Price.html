@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <!-- Load Tailwind CSS for utility classes and modern resets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="price.css">
+</head>
+<body>
+
+    <main class="text-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Choose the Right Plan for You</h1>
+        <p class="text-gray-500 mb-12">Flexible options designed to scale with your needs.</p>
+        
+        <div class="pricing-container">
+
+            <!-- Plan 1: Basic -->
+            <div class="pricing-card">
+                <div class="plan-header">Basic</div>
+                <div class="text-gray-500 text-sm mb-4">For individuals and small projects.</div>
+                
+                <div class="plan-price">
+                    <span class="currency">$</span>9
+                    <span class="duration">/month</span>
+                </div>
+                
+                <ul class="feature-list">
+                    <li><span class="check-icon">&#x2713;</span> 1 User Account</li>
+                    <li><span class="check-icon">&#x2713;</span> 10 GB Storage</li>
+                    <li><span class="check-icon">&#x2713;</span> Standard Support</li>
+                    <li class="text-gray-400"><span class="check-icon text-gray-400">&#x2713;</span> No API Access</li>
+                    <li class="text-gray-400"><span class="check-icon text-gray-400">&#x2713;</span> Limited Customization</li>
+                </ul>
+
+                <a href="#" class="plan-button">Start Basic Trial</a>
+            </div>
+
+            <!-- Plan 2: Standard (The Highlighted Popular Plan) -->
+            <div class="pricing-card popular-plan">
+                <p class="text-xs font-bold uppercase text-teal-600 mb-3 tracking-wider">Most Popular</p>
+                <div class="plan-header">Standard</div>
+                <div class="text-gray-500 text-sm mb-4">Perfect for growing teams and startups.</div>
+                
+                <div class="plan-price">
+                    <span class="currency">$</span>29
+                    <span class="duration">/month</span>
+                </div>
+                
+                <ul class="feature-list">
+                    <li><span class="check-icon">&#x2713;</span> 5 User Accounts</li>
+                    <li><span class="check-icon">&#x2713;</span> 100 GB Storage</li>
+                    <li><span class="check-icon">&#x2713;</span> Priority Email Support</li>
+                    <li><span class="check-icon">&#x2713;</span> Full API Access</li>
+                    <li class="text-gray-400"><span class="check-icon text-gray-400">&#x2713;</span> Limited Customization</li>
+                </ul>
+
+                <a href="#" class="plan-button">Get Started Now</a>
+            </div>
+
+            <!-- Plan 3: Premium -->
+            <div class="pricing-card">
+                <div class="plan-header">Premium</div>
+                <div class="text-gray-500 text-sm mb-4">For enterprises and unlimited scalability.</div>
+                
+                <div class="plan-price">
+                    <span class="currency">$</span>79
+                    <span class="duration">/month</span>
+                </div>
+                
+                <ul class="feature-list">
+                    <li><span class="check-icon">&#x2713;</span> Unlimited Users</li>
+                    <li><span class="check-icon">&#x2713;</span> Unlimited Storage</li>
+                    <li><span class="check-icon">&#x2713;</span> 24/7 Phone Support</li>
+                    <li><span class="check-icon">&#x2713;</span> Full API Access</li>
+                    <li><span class="check-icon">&#x2713;</span> Advanced Customization</li>
+                </ul>
+
+                <a href="#" class="plan-button">Contact Sales</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
