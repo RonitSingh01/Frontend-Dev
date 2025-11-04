@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors Demo</title>
+    <link rel="stylesheet" href="AdvancedSelectors.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced CSS Selectors Demonstration</h1>
+        <p>This page showcases Attribute Selectors, Pseudo-Classes, Pseudo-Elements, and Combinators.</p>
+    </header>
+
+    <main>
+        
+        <section class="selectors-demo">
+            <h2>Pseudo-Classes and Elements</h2>
+            
+            <form>
+                <input type="text" placeholder="Focus on me (:focus)">
+                <input type="text" value="Text Input">
+                <input type="number" placeholder="Number Input (Attribute Selector)">
+            </form>
+
+            <ul>
+                <li>List Item 1 (Odd child)</li>
+                <li>List Item 2 (Even child)</li>
+                <li>List Item 3 (Odd child)</li>
+                <li>List Item 4 (Even child)</li>
+            </ul>
+        </section>
+
+        <section class="combinator-demo">
+            <h2>Combinators and Attributes</h2>
+
+            <div class="parent">
+                <p>Direct Child Paragraph (Targeted by >)</p>
+                <span>
+                    <p>Grandchild Paragraph (Not targeted by >)</p>
+                </span>
+            </div>
+            
+            <p>Adjacent Sibling Paragraph</p>
+            
+            <p>General Sibling Paragraph 1</p>
+            <p>General Sibling Paragraph 2</p>
+
+            <a href="https://www.google.com" target="_blank">Secure Link (Starts with https)</a>
+            <a href="http://insecure.com" target="_blank">Insecure Link (Starts with http)</a>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>CSS Selectors Complete</p>
+    </footer>
+</body>
+</html>

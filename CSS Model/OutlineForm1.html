@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline and Focus Styling Form</title>
+    <!-- Link the external CSS file -->
+    <link rel="stylesheet" href="OutlineForm.css">
+</head>
+<body>
+    <header>
+        <h1>Outline and Focus Styling Demo</h1>
+        <p>Use the Tab key to navigate and observe how the outline property changes on focus.</p>
+    </header>
+
+    <main class="flex-center">
+        <form class="styled-form">
+            <h2>User Registration</h2>
+            
+            <!-- Group 1: Basic Focus Style Change (Demonstrates Outline Color Change) -->
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Standard Focus Change">
+            </div>
+
+            <!-- Group 2: Dashed Outline Style -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" class="input-dashed" placeholder="Dashed Outline">
+            </div>
+
+            <!-- Group 3: Outline Offset Demonstration -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="input-offset" placeholder="Outline Offset (5px)">
+            </div>
+            
+            <!-- Group 4: Textarea with different style -->
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" class="input-double" rows="4" placeholder="Double Outline Style"></textarea>
+            </div>
+
+            <button type="submit">Submit Form</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>CSS Outline Practice</p>
+    </footer>
+</body>
+</html>

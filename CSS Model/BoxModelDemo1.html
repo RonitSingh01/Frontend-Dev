@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exploration Page</title>
+    <!-- Link the external CSS file -->
+    <link rel="stylesheet" href="BoxModelDemo.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Box Model Exploration</h1>
+        <p>Understanding Content, Padding, Border, and Margin.</p>
+    </header>
+
+    <!-- Main container using Flexbox to center the demonstration -->
+    <main class="flex-container">
+        
+        <!-- Section for the default box model -->
+        <section class="model-section">
+            <h2>1. Standard Box Model (content-box)</h2>
+            <p class="description">
+                The browser's default behavior, where the **width/height** only include the **content** area. Padding and border are added *on top* of the declared dimensions.
+            </p>
+            
+            <div class="box standard-box">
+                <div class="content-layer">Content Area (300px width)</div>
+            </div>
+        </section>
+        
+        <!-- Section for the border-box model -->
+        <section class="model-section">
+            <h2>2. Modern Box Model (border-box)</h2>
+            <p class="description">
+                Using <code>box-sizing: border-box;</code> ensures the declared **width/height** includes the **content, padding, and border**. This makes layout math much simpler.
+            </p>
+            
+            <div class="box border-box">
+                <div class="content-layer">Content + Padding + Border (300px total width)</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CSS Fundamentals Practice</p>
+    </footer>
+</body>
+</html>

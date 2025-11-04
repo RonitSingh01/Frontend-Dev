@@ -1,0 +1,147 @@
+/* General Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #ecf0f1;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #3498db;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* --- PSEUDO-CLASSES and PSEUDO-ELEMENTS --- */
+/* ------------------------------------------------------------------- */
+
+/* Pseudo-Class: :focus */
+/* Targets the element that currently has focus (e.g., when clicked or tabbed to) */
+input[type="text"]:focus {
+    outline: 3px solid #f39c12; /* Orange glow on focus */
+    border-color: #f39c12;
+    background-color: #fffde7;
+}
+
+/* Pseudo-Class: :nth-child(odd/even) */
+/* Targets list items based on their position in the list */
+ul li:nth-child(odd) {
+    background-color: #d6eaf8; /* Light blue for odd items */
+    font-weight: bold;
+}
+
+ul li:nth-child(even) {
+    background-color: #eaf2f8; /* Very light blue for even items */
+}
+
+/* Pseudo-Class: :hover */
+/* Changes the style when the mouse cursor is over the element */
+ul li:hover {
+    background-color: #1abc9c; /* Teal on hover */
+    color: white;
+    cursor: pointer;
+    transform: translateX(5px);
+    transition: all 0.2s ease-out;
+}
+
+/* Pseudo-Element: ::before */
+/* Inserts content before the content of the selected element */
+ul li::before {
+    content: "📌 "; /* Adds a pin emoji before the list item text */
+    font-size: 0.8em;
+}
+
+/* Pseudo-Element: ::after */
+/* Inserts content after the content of the selected element */
+
+/* ------------------------------------------------------------------- */
+/* --- ATTRIBUTE SELECTORS --- */
+/* ------------------------------------------------------------------- */
+
+/* Attribute Selector: [type="number"] */
+/* Targets the element with the attribute 'type' exactly equal to 'number' */
+input[type="number"] {
+    background-color: #f9e79f; /* Light yellow background */
+    border: 2px solid #f1c40f;
+}
+
+/* Attribute Selector: [href^="https"] (Starts With) */
+/* Targets anchor tags whose 'href' attribute value starts with "https" */
+a[href^="https"] {
+    color: #27ae60; /* Green for secure links */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Attribute Selector: [href^="http"] (Starts With, generic) */
+/* Targets anchor tags whose 'href' attribute value starts with "http" (will include https) */
+a[href^="http"] {
+    display: block; /* Make links block level for better demo */
+    margin-top: 10px;
+    padding: 5px;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* --- COMBINATORS --- */
+/* ------------------------------------------------------------------- */
+
+.parent p {
+    /* Descendant Combinator (space): Targets ALL <p> elements inside .parent,
+       regardless of how deep they are (direct child, grandchild, etc.). */
+    color: #8e44ad; /* Purple text */
+    border: 1px dashed #8e44ad;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.parent > p {
+    /* Child Combinator (>): Targets ONLY <p> elements that are DIRECT children of .parent.
+       The grandchild <p> inside the <span> is ignored. */
+    background-color: #e5f3ff; /* Light blue background for direct children */
+    font-weight: bold;
+}
+
+.parent + p {
+    /* Adjacent Sibling Combinator (+): Targets the FIRST <p> that IMMEDIATELY follows
+       the .parent element at the same level in the DOM. */
+    background-color: #fddde6; /* Pink background */
+    border-left: 5px solid #e74c3c;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.parent ~ p {
+    /* General Sibling Combinator (~): Targets ALL <p> elements that follow
+       the .parent element at the same level in the DOM (not just the adjacent one). */
+    border-bottom: 1px dotted #7f8c8d; /* Dotted line under all following siblings */
+    padding-bottom: 5px;
+}

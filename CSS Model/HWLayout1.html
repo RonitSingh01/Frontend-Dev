@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height and Width Practice Layout</title>
+    <link rel="stylesheet" href="HWLayout.css">
+</head>
+<body>
+    <main class="flex-container">
+        
+        <div class="box box-one">
+            <h2>Box 1 (px & min-height)</h2>
+            <p>This box has a fixed **width of 300px** and a **min-height of 150px**. The content below demonstrates the **overflow: scroll** property.</p>
+            <div class="overflow-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+        <div class="box box-two">
+            <h2>Box 2 (% & max-width)</h2>
+            <p>This box has a relative **width of 50%** of its parent's width, but it is capped by a **max-width of 450px** to keep it from getting too large on wide screens. Its height is fixed at 12em.</p>
+        </div>
+
+        <div class="box box-three">
+            <h2>Box 3 (vh & em)</h2>
+            <p>This box uses viewport units for height: **30vh** (30% of the viewport height). Its width is fixed at **20em** (20 times the font size).</p>
+        </div>
+
+    </main>
+</body>
+</html>

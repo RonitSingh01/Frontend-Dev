@@ -1,0 +1,110 @@
+/* General Reset and Typography */
+* {
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Light background for contrast */
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #2c3e50; /* Dark header for good contrast */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+main {
+    flex-grow: 1; /* Allows main content to take up available space */
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Flexbox Layout for Boxes */
+.container {
+    display: flex; /* Enables Flexbox */
+    justify-content: space-around; /* Distributes space between and around items */
+    align-items: flex-start; /* Aligns items to the start (top) */
+    flex-wrap: wrap; /* Allows boxes to wrap to the next line on smaller screens */
+    gap: 20px; /* Space between flex items */
+    padding: 20px;
+}
+
+/* Base Styles for all Demonstration Boxes */
+.box {
+    width: 250px;
+    background-color: #ffffff; /* White box background */
+    padding: 20px; /* Default internal spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+/* --- Border Styles Demonstration --- */
+
+.solid {
+    border: 5px solid #3498db; /* Blue Solid Border */
+}
+
+.dashed {
+    border: 5px dashed #e74c3c; /* Red Dashed Border */
+}
+
+.double {
+    border: 8px double #2ecc71; /* Green Double Border (needs thicker border to see effect) */
+}
+
+.groove {
+    border: 10px groove #f39c12; /* Orange Groove Border (3D-like effect) */
+}
+
+/* --- Padding Demonstration --- */
+
+.asymmetrical-padding {
+    /* Different padding values (Top Right Bottom Left) */
+    padding: 10px 40px 10px 40px; 
+}
+
+/* --- Border-Radius Demonstration (Rounded Corners) --- */
+
+.rounded {
+    border-radius: 10px; /* Standard rounded corners */
+}
+
+.custom-radius {
+    /* More aggressive and non-uniform rounded corners */
+    border-radius: 50px 0 50px 0; 
+}
+
+/* --- Hover Effect with Transition --- */
+
+.box:hover {
+    /* Changes border color on hover */
+    border-color: #9b59b6; /* Purple color on hover */
+    /* Note: The transition is defined in the base .box class for smoothness */
+}

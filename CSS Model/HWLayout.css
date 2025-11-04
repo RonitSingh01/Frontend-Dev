@@ -1,0 +1,82 @@
+/* General Setup */
+* {
+    box-sizing: border-box; /* Ensures padding/border is included in height/width */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ecf0f1; /* Light gray background */
+    min-height: 100vh; /* Ensures body takes up full height of the viewport */
+    line-height: 1.6;
+}
+
+/* Flexbox for Centering (Requirement) */
+.flex-container {
+    /* Enables Flexbox */
+    display: flex;
+    /* Centers items horizontally */
+    justify-content: center; 
+    /* Centers items vertically (since body is min-height: 100vh) */
+    align-items: center; 
+    /* Ensures the container fills the viewport */
+    min-height: 100vh; 
+    /* Allows boxes to stack nicely on smaller screens */
+    flex-wrap: wrap; 
+    /* Spacing between boxes */
+    gap: 30px; 
+    padding: 20px;
+}
+
+/* Base Box Styling */
+.box {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    color: #333;
+    /* Setting a flexible size basis to allow Flexbox to arrange them */
+    flex-shrink: 0; 
+}
+
+.box h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 5px;
+}
+
+/* --- Box 1: Pixels (px) and min-height/overflow --- */
+.box-one {
+    background-color: #3498db; /* Blue */
+    width: 300px; /* Fixed width in px */
+    min-height: 150px; /* Minimum height in px */
+}
+
+/* Demonstration of overflow */
+.overflow-content {
+    height: 80px; /* Smaller height than content to force overflow */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: scroll; /* Scrollbars appear if content exceeds the height */
+    border-radius: 4px;
+}
+
+
+/* --- Box 2: Percentage (%) and max-width --- */
+.box-two {
+    background-color: #2ecc71; /* Green */
+    width: 50%; /* Width is 50% of the .flex-container */
+    max-width: 450px; /* Maximum width limit */
+    height: 12em; /* Height in ems (relative to font size) */
+    /* Demonstration: The box will grow up to 50% width, but stop at 450px */
+}
+
+/* --- Box 3: Viewport Height (vh) and Ems (em) --- */
+.box-three {
+    background-color: #e74c3c; /* Red */
+    height: 30vh; /* Height is 30% of the viewport height */
+    width: 20em; /* Fixed width in ems */
+    /* Demonstration: The box height will change when the browser window is resized vertically */
+}

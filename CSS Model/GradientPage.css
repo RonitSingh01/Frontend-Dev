@@ -1,0 +1,98 @@
+/* General Reset and Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    /* Ensure body has enough height to enable scrolling for parallax/fixed elements */
+    min-height: 200vh; 
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+/* --- Fixed Header and Footer Styling --- */
+.fixed-element {
+    background-color: #34495e; /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed; /* Makes the element fixed in the viewport */
+    z-index: 100; /* Ensures it stays on top of other content */
+}
+
+header {
+    top: 0; /* Fixes header to the top */
+    border-bottom: 3px solid #2c3e50;
+}
+
+footer {
+    bottom: 0; /* Fixes footer to the bottom */
+    border-top: 3px solid #2c3e50;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Compensate for fixed header/footer so content isn't hidden underneath */
+main {
+    padding-top: 60px; /* Adjust based on header height */
+    padding-bottom: 50px; /* Adjust based on footer height */
+}
+
+/* Base Section Styling */
+section {
+    min-height: 100vh; /* Ensures sections fill the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: white; /* Default text color for dark backgrounds */
+    text-align: center;
+}
+
+.content-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.spacer {
+    /* Used in linear-section to ensure enough scrollable content */
+    height: 50vh; 
+}
+
+
+/* --- Section 1: Linear Gradient and Parallax --- */
+.linear-section {
+    /* Linear Gradient: direction, color-stop1, color-stop2, ... */
+    background-image: linear-gradient(
+        to top left, 
+        #9b59b6, /* Purple */ 
+        #3498db  /* Blue */
+    );
+    
+    /* Parallax Effect Requirement */
+    background-attachment: fixed; 
+    background-size: cover; /* Ensures the gradient covers the section */
+}
+
+
+/* --- Section 2: Radial Gradient --- */
+.radial-section {
+    /* Radial Gradient: shape/size at position, color-stop1, color-stop2, ... */
+    background-image: radial-gradient(
+        circle at center, 
+        #f1c40f 0%, /* Yellow start at center */ 
+        #e67e22 70%, /* Orange mid-point */
+        #d35400 100% /* Dark Orange edge */
+    );
+}

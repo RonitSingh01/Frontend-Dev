@@ -1,0 +1,122 @@
+/* General Setup and Reset */
+* {
+    /* Apply box-sizing: border-box globally for the modern, simpler model 
+       on everything EXCEPT the element used to demonstrate the default model */
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Consolas', monospace; /* Monospace font for technical feel */
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #5d6d7e; /* Steel blue header */
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* --- Flexbox Centering Requirement --- */
+.flex-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly */
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.model-section {
+    max-width: 45%;
+    min-width: 350px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    color: #566573;
+}
+
+h2 {
+    color: #2e86c1;
+    margin-bottom: 10px;
+}
+
+/* Base Box Styling */
+.box {
+    margin: 30px; /* Outer Margin Layer (Visibility 1) */
+    background-color: #d6eaf8; /* Margin area background */
+    outline: 5px dashed #aed6f1; /* Outline to highlight the margin boundary */
+    padding: 10px; /* Inner Padding Layer (Visibility 2) */
+    text-align: center;
+}
+
+.content-layer {
+    /* Border Layer (Visibility 3) */
+    border: 10px solid #27ae60; /* Green border */
+    
+    /* Content Layer (Visibility 4) */
+    background-color: #f9e79f; /* Yellow content background */
+    padding: 20px; /* Padding inside the content box */
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+/* --------------------------------------------------- */
+/* --- Standard Box Model Demonstration --- */
+/* --------------------------------------------------- */
+
+.standard-box {
+    /* 1. Resetting to default content-box for demonstration */
+    box-sizing: content-box; 
+    
+    /* 2. Setting fixed width/height for comparison */
+    /* Total actual width: 300 (content) + 20*2 (padding) + 10*2 (border) = 360px */
+    width: 300px; 
+    height: 100px;
+}
+
+.standard-box .content-layer {
+    /* The padding here is added to the 300x100 dimensions */
+    padding: 20px; 
+}
+
+
+/* --------------------------------------------------- */
+/* --- Border-Box Model Demonstration --- */
+/* --------------------------------------------------- */
+
+.border-box {
+    /* Setting fixed width/height for comparison */
+    /* Total actual width: 300px */
+    width: 300px; 
+    height: 100px;
+    
+    /* box-sizing: border-box is applied globally, but explicitly here for clarity */
+    box-sizing: border-box; 
+}
+
+.border-box .content-layer {
+    /* The 300x100 dimensions NOW INCLUDE this padding and the border */
+    padding: 20px; 
+}

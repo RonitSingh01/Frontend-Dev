@@ -1,0 +1,133 @@
+/* General Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6; /* Base line-height for good readability */
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1a5276; /* Dark blue header */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    /* Demonstrating a specific font family for headings */
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+.subtitle {
+    font-size: 1.1em;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f3f4;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+.article-container {
+    max-width: 800px; /* Constrain width for optimal reading length */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    color: #2980b9;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    padding-top: 5px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+/* --------------------------------------------------- */
+/* --- Readability and Balance Properties --- */
+/* --------------------------------------------------- */
+
+.section-one p {
+    font-family: Georgia, serif; /* Seriff font for the first section */
+    font-size: 1.1em; /* Increased font size */
+    line-height: 1.8; /* Generous line height for primary reading block */
+    text-align: justify; /* Justify alignment (optional, but shows property) */
+}
+
+.sans-serif-example {
+    font-family: 'Arial', sans-serif; /* Sans-serif font */
+    font-weight: 300; /* Lighter weight for modern look */
+    text-align: left;
+}
+
+/* Demonstrating letter-spacing on a specific class */
+.spaced-text {
+    letter-spacing: 0.1em; /* Increased spacing */
+    line-height: 1.4; /* Slightly tighter line height */
+    text-transform: uppercase;
+}
+
+
+/* --------------------------------------------------- */
+/* --- Pseudo-Elements for Emphasis --- */
+/* --------------------------------------------------- */
+
+/* ::first-letter: Styles the first letter of the first line of a block-level element */
+.section-two p:first-of-type::first-letter {
+    font-size: 3em; /* Large size */
+    font-weight: 900; /* Extra bold */
+    color: #e67e22; /* Orange color */
+    float: left; /* Drop cap effect */
+    margin-right: 8px;
+    line-height: 1;
+}
+
+/* ::first-line: Styles the first line of a block-level element */
+.section-two p:first-of-type::first-line {
+    font-variant: small-caps; /* Small caps effect */
+    color: #333;
+}
+
+
+/* --------------------------------------------------- */
+/* --- Custom Element Styling --- */
+/* --------------------------------------------------- */
+
+/* Styling <mark> element */
+mark {
+    background-color: #f7dc6f; /* Custom soft yellow highlight */
+    color: #6d4c41; /* Brown text color for contrast */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Styling <strong> element */
+strong {
+    color: #c0392b; /* Strong red color */
+    font-weight: 700; /* Extra bold */
+}
+
+/* Styling <em> element */
+em {
+    color: #16a085; /* Teal color */
+    font-style: normal; /* Override default italics to demonstrate custom style */
+    text-decoration: underline;
+}

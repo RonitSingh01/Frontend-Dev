@@ -1,0 +1,119 @@
+/* General Reset and Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f9; /* Light, neutral background */
+    color: #333;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Text Shadow Requirement --- */
+header h1 {
+    font-size: 2.5em;
+    /* text-shadow: H-offset V-offset Blur Color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+/* --- Flexbox Layout for Card Arrangement Requirement --- */
+.card-container {
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers cards horizontally */
+    align-items: flex-start; /* Aligns cards to the top of the container */
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    gap: 30px; /* Space between cards */
+    padding: 40px 20px;
+}
+
+/* Base Card Styling */
+.card {
+    background-color: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    
+    /* Smooth Transition Requirement */
+    /* Transition applied to box-shadow and transform properties */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
+
+.card img {
+    border-radius: 50%; /* Circle image */
+    margin-bottom: 15px;
+    border: 4px solid #ddd;
+}
+
+.card h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    /* Text Shadow added to card headings */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* --- Box Shadow Styles Demonstration --- */
+
+/* Card 1: Subtle Shadow (Low opacity, large blur) */
+.card-one {
+    /* box-shadow: H-offset V-offset Blur Spread Color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Card 2: Sharp Shadow (Higher opacity, smaller blur) */
+.card-two {
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25); 
+}
+
+/* Card 3: Deep Multi-Layer Shadow */
+.card-three {
+    box-shadow: 
+        /* Shadow 1: Dark and focused */
+        0 8px 15px rgba(0, 0, 0, 0.3), 
+        /* Shadow 2: Lighter and spread out for surrounding glow */
+        0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* --- Hover Effect (Lifting Card) Requirement --- */
+.card:hover {
+    /* Lifts the card slightly off the screen */
+    transform: translateY(-5px); 
+    
+    /* Apply a larger shadow when lifted to emphasize depth change */
+    box-shadow: 
+        /* A large, visible shadow for the 'lift' effect */
+        0 15px 30px rgba(0, 0, 0, 0.35),
+        /* A slight shadow near the bottom for a cleaner look */
+        0 5px 10px rgba(0, 0, 0, 0.1);
+}

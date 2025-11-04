@@ -1,0 +1,108 @@
+/* General Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-top: 1px solid #ddd;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* --- Flexbox Arrangement Requirement --- */
+.container {
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers items horizontally */
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    gap: 40px; /* Space between transformation items */
+    padding: 20px;
+}
+
+.showcase-item {
+    text-align: center;
+    width: 220px; /* Ensures all items have uniform width */
+}
+
+/* Base Box Styling */
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px; /* Center box within its parent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    
+    /* Transition Requirement */
+    /* Applies smooth transition to all animatable properties */
+    transition: all 0.4s ease; 
+}
+
+.label {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    min-height: 40px; /* Ensures labels align even if they wrap */
+}
+
+/* --- Individual Transformation Styles --- */
+
+/* 1. Rotate() */
+.rotate {
+    background-color: #3498db; /* Blue */
+}
+.rotate:hover {
+    /* Rotates the box 45 degrees clockwise */
+    transform: rotate(45deg); 
+}
+
+/* 2. Scale() */
+.scale {
+    background-color: #2ecc71; /* Green */
+}
+.scale:hover {
+    /* Scales the box up to 120% of its original size */
+    transform: scale(1.2); 
+}
+
+/* 3. Translate() */
+.translate {
+    background-color: #f1c40f; /* Yellow */
+}
+.translate:hover {
+    /* Moves the box 20px right (X) and 20px up (Y) */
+    transform: translate(20px, -20px); 
+}
+
+/* 4. Skew() */
+.skew {
+    background-color: #e74c3c; /* Red */
+}
+.skew:hover {
+    /* Skews the box 15 degrees on the X-axis and 5 degrees on the Y-axis */
+    transform: skew(15deg, 5deg); 
+}
