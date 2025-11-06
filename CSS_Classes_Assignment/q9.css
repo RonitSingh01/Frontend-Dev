@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f8ff;
+  font-family: sans-serif;
+}
+
+.effect-container {
+  display: flex;
+  gap: 20px;
+}
+
+.effect-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.effect-btn:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+.effect-btn:active {
+  transform: scale(0.95);
+}

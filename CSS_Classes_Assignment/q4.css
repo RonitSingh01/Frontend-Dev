@@ -1,0 +1,36 @@
+/* element selector */
+p {
+  color: #333;
+}
+
+/* class selector */
+.intro {
+  font-style: italic;
+  color: blue;
+}
+
+/* ID selector */
+#special {
+  font-weight: bold;
+  color: darkgreen;
+}
+
+/* attribute selector */
+li[data-info] {
+  color: brown;
+}
+
+/* descendant selector */
+.parent p {
+  color: purple;
+}
+
+/* adjacent sibling */
+p + span {
+  color: orange;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}

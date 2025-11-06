@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.animation-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* moving box */
+.box {
+  width: 60px;
+  height: 60px;
+  background: tomato;
+  animation: moveBox 3s ease-in-out infinite alternate;
+}
+
+@keyframes moveBox {
+  from { transform: translateX(0); }
+  to { transform: translateX(150px); }
+}
+
+/* bouncing ball */
+.ball {
+  width: 50px;
+  height: 50px;
+  background: royalblue;
+  border-radius: 50%;
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-80px); }
+}
+
+/* color-changing text */
+.color-text {
+  animation: colorShift 4s infinite;
+}
+
+@keyframes colorShift {
+  0% { color: red; }
+  50% { color: green; }
+  100% { color: blue; }
+}

@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tooltip-container {
+  display: flex;
+  gap: 30px;
+}
+
+.tooltip {
+  position: relative;
+  padding: 10px 15px;
+  background: #3498db;
+  color: white;
+  border-radius: 6px;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+}
