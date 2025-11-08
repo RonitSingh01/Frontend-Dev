@@ -1,0 +1,38 @@
+
+body {
+  margin: 0;
+}
+
+.card-container {
+  display: flex;
+  gap: 16px;          
+  padding: 16px;       
+}
+
+.card {
+  flex: 1;            
+  padding: 24px;       
+  text-align: center;
+  background-color: lightgray;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: darkgray;
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}

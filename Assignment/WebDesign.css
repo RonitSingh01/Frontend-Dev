@@ -1,0 +1,51 @@
+
+body { margin: 0; }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+.features {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.feature {
+  flex: 1;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.feature:hover {
+  transform: scale(1.03);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 16px;
+}
+
+@media (max-width: 750px) {
+  .features {
+    flex-direction: column;
+  }
+}

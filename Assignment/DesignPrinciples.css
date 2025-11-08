@@ -1,0 +1,30 @@
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 12px;
+}
+
+.box {
+  padding: 12px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.box:hover {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+}
+
+pre {
+  margin: 8px 0 0 0;
+  padding: 8px;
+  background: rgba(0,0,0,0.04);
+  overflow: auto;
+}
+
+@media (max-width: 600px) {
+  .principles {
+    grid-template-columns: 1fr;
+  }
+}

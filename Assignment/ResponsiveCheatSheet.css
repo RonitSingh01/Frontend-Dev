@@ -1,0 +1,28 @@
+
+.cheatsheet {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 12px;
+}
+
+.box {
+  padding: 12px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 700px) {
+  .cheatsheet {
+    grid-template-columns: 1fr; /* stacked rows */
+  }
+
+  .box h2,
+  .box p {
+    margin: 0 0 8px 0;
+  }
+}

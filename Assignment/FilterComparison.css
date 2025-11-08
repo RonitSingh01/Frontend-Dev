@@ -1,0 +1,31 @@
+
+.comparison {
+  display: flex;
+  gap: 12px;
+}
+
+.comparison figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.35s ease; 
+}
+
+.comparison figure.filtered img {
+  filter: contrast(140%);
+}
+
+.comparison figure.filtered:hover img {
+  filter: none;
+}
+
+.comparison figcaption {
+  margin-top: 8px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .comparison {
+    flex-direction: column;
+  }
+}
