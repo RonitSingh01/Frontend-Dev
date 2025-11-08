@@ -1,0 +1,21 @@
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+.box {
+  padding: 2rem;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #e6f0ff, #cfe4ff);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  color: #072046;
+}
+

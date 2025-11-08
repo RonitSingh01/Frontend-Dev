@@ -1,0 +1,18 @@
+/* Default style - Desktop */
+body {
+background-color: lightyellow;
+text-align: center;
+padding: 50px;
+}
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+body {
+background-color: lightgreen;
+}
+}
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+body {
+background-color: lightblue;
+}
+}
