@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-msg {
+    display: none;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Validation styles [cite: 21] */
+.form-group input.valid {
+    border: 2px solid green;
+}
+
+.form-group input.invalid {
+    border: 2px solid red;
+}
+
+.form-group input.invalid + .error-msg {
+    display: block;
+    color: red;
+}

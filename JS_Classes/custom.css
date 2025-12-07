@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Styles for the dynamically generated form */
+#dynamic-form {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.dynamic-form-group {
+    margin-bottom: 15px;
+}
+
+.dynamic-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.dynamic-form-group input {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#dynamic-submit-btn {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#dynamic-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    border: 1px solid #ccc;
+}

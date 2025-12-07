@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3: Library Management System</title>
+    <link rel="stylesheet" href="lib.css">
+</head>
+<body>
+    <h1>Library Management System</h1>
+
+    <div class="issue-section">
+        <h2>Issue a Book</h2>
+        <label for="isbn-input">Enter ISBN:</label>
+        <input type="text" id="isbn-input" placeholder="e.g., 978-3-16-148410-0">
+        <button id="issue-btn">Issue Book</button>
+        <p id="message-area"></p>
+    </div>
+
+    <div class="book-list">
+        <h2>Available Books</h2>
+        <ul id="available-books-list">
+            </ul>
+    </div>
+
+    <script src="lib.js"></script>
+</body>
+</html>

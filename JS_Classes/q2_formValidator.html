@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2: Student Form Validator</title>
+    <link rel="stylesheet" href="stud.css">
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form id="student-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span class="error-msg">Name must contain only alphabets and spaces. [cite: 17]</span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <span class="error-msg">Please enter a valid email (e.g., example@domain.com). [cite: 18]</span>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone">
+            <span class="error-msg">Phone must be exactly 10 digits. [cite: 19]</span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span class="error-msg">Must contain 1 uppercase, 1 number, and 1 special character. [cite: 20]</span>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+    <script src="stud.js"></script>
+</body>
+</html>
