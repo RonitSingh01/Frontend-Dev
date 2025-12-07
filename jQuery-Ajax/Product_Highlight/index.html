@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Q2 - Product Highlight</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial; padding:20px; }
+    .products { display:flex; gap:12px; flex-wrap:wrap; }
+    .product { width:180px; padding:10px; border:1px solid #ddd; border-radius:6px; position:relative; }
+    .product .details { display:none; font-size:13px; margin-top:6px; }
+    .product.highlight { box-shadow:0 0 0 3px rgba(30,144,255,0.15); background:#f0fbff; }
+    .favorite.selected { color:crimson; font-weight:bold; }
+    .discount { border-color: #ffcc00; }
+  </style>
+</head>
+<body>
+  <header><h1>Shop</h1></header>
+  <main>
+    <section class="products" aria-label="Product list">
+      <!-- At least 5 products -->
+      <article class="product" data-stock="in" data-discount="10" data-id="p1">
+        <h2 class="pname">Notebook</h2>
+        <p class="price">₹299</p>
+        <button class="favorite" title="Add to favorites">♡</button>
+        <div class="details">200 pages, A5 size, ruled.</div>
+      </article>
+
+      <article class="product" data-stock="out" data-discount="0" data-id="p2">
+        <h2 class="pname">Wireless Mouse</h2>
+        <p class="price">₹499</p>
+        <button class="favorite">♡</button>
+        <div class="details">2.4GHz, USB receiver.</div>
+      </article>
+
+      <article class="product" data-stock="in" data-discount="25" data-id="p3">
+        <h2 class="pname">Backpack</h2>
+        <p class="price">₹1199</p>
+        <button class="favorite">♡</button>
+        <div class="details">Water-resistant, 20L capacity.</div>
+      </article>
+
+      <article class="product" data-stock="in" data-discount="0" data-id="p4">
+        <h2 class="pname">Desk Lamp</h2>
+        <p class="price">₹799</p>
+        <button class="favorite">♡</button>
+        <div class="details">LED, adjustable brightness.</div>
+      </article>
+
+      <article class="product" data-stock="out" data-discount="15" data-id="p5">
+        <h2 class="pname">Bluetooth Speaker</h2>
+        <p class="price">₹899</p>
+        <button class="favorite">♡</button>
+        <div class="details">10W, 8 hours playtime.</div>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

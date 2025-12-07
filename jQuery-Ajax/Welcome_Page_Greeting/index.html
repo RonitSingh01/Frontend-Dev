@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Q1 - Welcome Greeting</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="q1.css">
+  <style>
+    main { padding: 20px; font-family: Arial; }
+    .welcome { margin: 10px 0; padding: 15px; border-radius: 6px; background:#f0f8ff; cursor:pointer; }
+    .hidden { display:none; }
+    button { margin-right:10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome Portal</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="greeting-area" aria-live="polite">
+      <div id="greeting" class="welcome" tabindex="0">Hello!</div>
+      <p id="sub-msg">We're glad you're here.</p>
+      <button id="change-greet">Change Greeting</button>
+      <button id="toggle-welcome">Toggle Welcome Message</button>
+      <button id="reset-greet">Reset Greeting</button>
+    </section>
+
+    <footer>
+      <small>© Example University</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Q5 - Team Directory</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .dept { margin-bottom:20px; }
+    .member { padding:6px; border:1px solid #ddd; margin:4px; display:inline-block; border-radius:6px; }
+    .highlight { background:#e6ffe6; }
+    .contact { display:none; font-size:12px; margin-top:4px;}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Company Directory</h1>
+
+    <section class="dept" data-dept="engineering">
+      <h2 class="dept-title">Engineering (click to toggle department background)</h2>
+
+      <div class="manager member" data-role="manager" data-id="m1">
+        <strong>Asha (Manager)</strong>
+        <div class="contact">asha@example.com | +91-7000</div>
+        <div class="reports">
+          <div class="member" data-manager="m1">Raj</div>
+          <div class="member" data-manager="m1">Priya</div>
+          <div class="member" data-manager="m1">Sandeep</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dept" data-dept="marketing">
+      <h2 class="dept-title">Marketing</h2>
+      <div class="manager member" data-role="manager" data-id="m2">
+        <strong>Vikram (Manager)</strong>
+        <div class="contact">vikram@example.com | +91-7001</div>
+        <div class="reports">
+          <div class="member" data-manager="m2">Sneha</div>
+          <div class="member" data-manager="m2">Amit</div>
+          <div class="member" data-manager="m2">Ritu</div>
+        </div>
+      </div>
+    </section>
+
+    <div style="margin-top:20px;">
+      <button id="random-employee">Select Random Employee</button>
+      <button id="collapse-team">Collapse/Expand Teams</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Q3 - Interactive FAQ</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{font-family:Arial;padding:20px;}
+    .faq dt { cursor:pointer; padding:8px; border-bottom:1px solid #eee; }
+    .faq dd { display:none; margin:0 0 12px 10px; }
+    .highlight { background:#fff5cc; }
+    .focused { outline:2px solid #87ceeb; }
+    input.answer-input { display:block; margin-top:8px; width:80%; padding:6px;}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>FAQ</h1>
+    <dl class="faq">
+      <dt tabindex="0">What is our refund policy?</dt>
+      <dd>
+        <p>Refunds available within 14 days of purchase.</p>
+        <input class="answer-input" placeholder="Leave feedback (optional)">
+      </dd>
+
+      <dt tabindex="0">How to contact support?</dt>
+      <dd>
+        <p>Email support@example.com or call 1800-123.</p>
+        <input class="answer-input" placeholder="Type your question">
+      </dd>
+
+      <dt tabindex="0">Do you have student discounts?</dt>
+      <dd>
+        <p>Yes, verify with student ID for 15% discount.</p>
+        <input class="answer-input" placeholder="Enter ID (optional)">
+      </dd>
+
+      <dt tabindex="0">Can I upgrade my plan?</dt>
+      <dd>
+        <p>Upgrades are available from dashboard.</p>
+        <input class="answer-input" placeholder="Ask about upgrades">
+      </dd>
+
+      <dt tabindex="0">Where are you located?</dt>
+      <dd>
+        <p>We have offices in multiple cities worldwide.</p>
+        <input class="answer-input" placeholder="Request office address">
+      </dd>
+    </dl>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
