@@ -1,0 +1,10 @@
+/* Minimal styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f6ff;
+    padding: 20px;
+}
+
+h1 {
+    color: #222;
+}

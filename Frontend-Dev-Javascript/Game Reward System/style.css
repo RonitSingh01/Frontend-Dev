@@ -1,0 +1,10 @@
+/* Basic styling for display clarity */
+body {
+    font-family: Arial, sans-serif;
+    background: #faf3e0;
+    padding: 20px;
+}
+
+h1 {
+    color: #444;
+}

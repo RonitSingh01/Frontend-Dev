@@ -1,0 +1,10 @@
+/* Light, clean design for display */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f0f7ff;
+}
+
+h1 {
+    color: #333;
+}

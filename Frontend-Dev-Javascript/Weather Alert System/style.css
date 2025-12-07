@@ -1,0 +1,10 @@
+/* Simple clean UI styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #e8f0f7;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}

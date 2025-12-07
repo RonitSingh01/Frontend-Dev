@@ -1,0 +1,10 @@
+/* Simple styling just to make the page look neat */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
