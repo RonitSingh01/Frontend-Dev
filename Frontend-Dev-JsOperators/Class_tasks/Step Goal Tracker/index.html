@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Goal Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tracker-box">
+            <h1>Step Goal Tracker</h1>
+            <p class="subtitle">Daily Goal: 10,000 Steps</p>
+            
+            <div class="progress-circle-container">
+                <svg class="progress-ring" width="200" height="200">
+                    <circle
+                        class="progress-ring-circle-bg"
+                        stroke="#e0e0e0"
+                        stroke-width="15"
+                        fill="transparent"
+                        r="85"
+                        cx="100"
+                        cy="100"/>
+                    <circle
+                        id="progressCircle"
+                        class="progress-ring-circle"
+                        stroke="url(#gradient)"
+                        stroke-width="15"
+                        fill="transparent"
+                        r="85"
+                        cx="100"
+                        cy="100"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="progress-text">
+                    <div id="stepsDisplay" class="steps-number">0</div>
+                    <div class="steps-label">steps</div>
+                    <div id="percentageDisplay" class="percentage">0%</div>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="steps">Enter Your Steps:</label>
+                <input type="number" id="steps" placeholder="Enter steps walked" min="0">
+            </div>
+            
+            <button id="updateBtn">Update Progress</button>
+            
+            <div id="statusMessage" class="status-message hidden">
+                <div id="statusIcon" class="status-icon"></div>
+                <div id="statusText" class="status-text"></div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="remaining">10,000</div>
+                    <div class="stat-label">Steps Remaining</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="calories">0</div>
+                    <div class="stat-label">Calories Burned</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="distance">0</div>
+                    <div class="stat-label">Distance (km)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.calculator-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.result {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.result.hidden {
+    display: none;
+}
+
+.bmi-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bmi-value .label {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.bmi-value .value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.progress-bar-container {
+    margin: 30px 0;
+    position: relative;
+}
+
+.progress-bar {
+    height: 30px;
+    background: linear-gradient(to right, 
+        #3498db 0%, 
+        #3498db 18.5%, 
+        #2ecc71 18.5%, 
+        #2ecc71 25%, 
+        #f39c12 25%, 
+        #f39c12 30%, 
+        #e74c3c 30%, 
+        #e74c3c 100%);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: var(--bmi-position, 0%);
+    width: 4px;
+    height: 40px;
+    background: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: left 0.5s ease;
+}
+
+.progress-markers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    position: relative;
+}
+
+.marker {
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 600;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.category {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.category.underweight {
+    background: #3498db;
+    color: white;
+}
+
+.category.normal {
+    background: #2ecc71;
+    color: white;
+}
+
+.category.overweight {
+    background: #f39c12;
+    color: white;
+}
+
+.category.obese {
+    background: #e74c3c;
+    color: white;
+}
+
+.info-text {
+    text-align: center;
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.bmi-guide {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.bmi-guide h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.guide-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.guide-item.underweight .color-box {
+    background: #3498db;
+}
+
+.guide-item.normal .color-box {
+    background: #2ecc71;
+}
+
+.guide-item.overweight .color-box {
+    background: #f39c12;
+}
+
+.guide-item.obese .color-box {
+    background: #e74c3c;
+}

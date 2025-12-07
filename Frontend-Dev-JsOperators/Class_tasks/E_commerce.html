@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Order Processor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 8px;
+            width: 250px;
+        }
+        #bill {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🛒 E-Commerce Order Processing System</h2>
+
+    <label>Product Price:</label><br>
+    <input type="text" id="price"><br>
+
+    <label>Quantity:</label><br>
+    <input type="text" id="quantity"><br>
+
+    <label>Delivery Day (1–7):</label><br>
+    <input type="text" id="day"><br>
+
+    <button onclick="processOrder()">Generate Bill</button>
+
+    <p id="bill"></p>
+
+    <script src="task2.js"></script>
+
+</body>
+</html>
