@@ -1,0 +1,52 @@
+/* ---------------------------------------------------- */
+/* CUSTOM THEME OVERRIDES */
+/* ---------------------------------------------------- */
+
+:root {
+    /* 1. Override the Bootstrap Primary Color */
+    /* Original Bootstrap primary is usually #0d6efd (Blue). 
+       We change it here to a custom deep teal color: */
+    --bs-primary: #008080; /* Custom Teal */
+    
+    /* Optional: Change the light color derivative if needed */
+    /* --bs-primary-rgb: 0, 128, 128; */
+    
+    /* 2. Override the Sans-Serif Font Family */
+    /* We include 'Poppins' (imported in HTML) as the primary font, 
+       followed by Bootstrap's defaults for fallbacks. */
+    --bs-font-sans-serif: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* ---------------------------------------------------- */
+/* GENERAL STYLING */
+/* ---------------------------------------------------- */
+
+/* The body and all text will now use the Poppins font automatically */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Ensure headings explicitly use the custom color where needed 
+   (though they often inherit from the text-primary utility) */
+.h1, .h2, .h3, .h5 {
+    font-weight: 700; /* Bold weight from the Poppins import */
+}
+
+/* Custom shadow/lift on hover for card to match theme professionalism */
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ensure the custom teal primary button has a slightly darker hover state */
+.btn-primary {
+    /* Background color is already the custom --bs-primary */
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: #006666; /* Darker teal on hover */
+    border-color: #006666;
+}

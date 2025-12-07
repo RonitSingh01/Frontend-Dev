@@ -1,0 +1,27 @@
+/* Custom CSS for the Landing Page */
+
+/* Style for the Hero Section */
+.hero-section {
+    /* Set a minimum height to ensure the section fills the viewport */
+    min-height: 85vh; 
+    
+    /* Realistic visual: Set a compelling background image */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://picsum.photos/1600/900?random=1') no-repeat center center;
+    
+    /* Ensure the background image covers the whole section */
+    background-size: cover; 
+    
+    /* Optional: Smooth transition for background changes (not used here, but good practice) */
+    /* transition: background-size 0.3s ease-in-out; */
+}
+
+/* Optional: Subtle hover effect for the Get Started button */
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Note: All responsiveness (header collapse, column stacking) is handled by Bootstrap classes 
+   like .navbar-expand-lg, .col-12, .col-md-4, etc. */

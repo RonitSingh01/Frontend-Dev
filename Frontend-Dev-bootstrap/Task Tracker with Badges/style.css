@@ -1,0 +1,25 @@
+/* Custom CSS for Task Tracker */
+
+/* Set body background for a clean dashboard look */
+body {
+    background-color: #f7f9fc;
+}
+
+/* Ensure the list items look interactive (optional hover effect) */
+.list-group-item:not(.list-group-item-success):hover {
+    background-color: #f3f3f3;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Style the task title slightly to make it stand out from the badge */
+.task-title {
+    font-weight: 500;
+    color: #343a40; /* Dark gray text */
+}
+
+/* Style for the card container */
+.card {
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+}

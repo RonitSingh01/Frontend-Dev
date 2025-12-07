@@ -1,0 +1,25 @@
+/* Custom CSS for Pricing Plans */
+
+/* Apply smooth transitions to all cards */
+.card-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+    position: relative; /* Needed for the 'Most Popular' badge positioning */
+}
+
+/* Hover Effect: Lift the card and apply a larger shadow */
+.card-item:hover {
+    transform: translateY(-8px); /* Lift the card */
+    /* shadow-lg effect achieved manually for more control: */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; 
+}
+
+/* Specific hover adjustment for the already featured card (Pro Plan) */
+.featured-card:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important; /* Slightly darker shadow on hover */
+}
+
+/* Limit the width of the features list for a cleaner look */
+.features-list {
+    max-width: 200px;
+}

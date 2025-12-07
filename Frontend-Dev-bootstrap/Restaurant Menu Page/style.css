@@ -1,0 +1,22 @@
+/* Custom CSS for Restaurant Menu Page */
+
+/* Set a pleasant background color for the body */
+body {
+    background-color: #f7f7f7;
+}
+
+/* Custom font for a touch of elegance (optional) */
+h1, h2, h3 {
+    font-family: Georgia, serif;
+}
+
+/* Give the main section some breathing room and a white background */
+.py-5 {
+    background-color: white;
+}
+
+/* Ensure figure captions look clean */
+.figure-caption {
+    color: #6c757d; /* Bootstrap muted text color */
+    padding-top: 0.5rem;
+}

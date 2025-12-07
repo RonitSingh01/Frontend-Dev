@@ -1,0 +1,22 @@
+/* Custom CSS for Travel Agency Showcase */
+
+/* Set a controlled height for the carousel images (crucial for visual appeal) */
+.carousel-img {
+    /* Set a minimum height for smaller screens */
+    min-height: 350px; 
+    /* Set a maximum height for larger screens */
+    max-height: 60vh;
+    /* Ensure the image covers the entire slide area */
+    object-fit: cover; 
+}
+
+/* Style the carousel captions for better readability over the images */
+.carousel-caption {
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+/* Ensure the main container is not too wide for the carousel */
+.container {
+    max-width: 1200px;
+}

@@ -1,0 +1,11 @@
+/* Custom CSS for Portfolio Page */
+
+/* Fix the size of the profile image for consistent presentation */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Note: All required spacing (mt-4, p-5, mb-3), colors (bg-primary, bg-light), 
+   and form styling (.form-control) are handled by Bootstrap utility classes directly in the HTML. */

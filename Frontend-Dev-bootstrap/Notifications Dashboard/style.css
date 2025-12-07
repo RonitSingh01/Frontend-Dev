@@ -1,0 +1,28 @@
+/* Custom CSS for Notifications Dashboard */
+
+/* Set body background for contrast */
+body {
+    background-color: #e9ecef; /* Bootstrap light gray, good for dashboard look */
+}
+
+/* Center the card vertically and provide a max width for desktop viewing */
+.container {
+    max-width: 900px;
+}
+
+/* Minimal styling for the card container */
+.card {
+    border: none;
+    border-radius: 1rem;
+}
+
+/* Custom Alert Icon Colors (Making them slightly more prominent) */
+.alert-success svg {
+    fill: #155724; /* Darker green */
+}
+.alert-info svg {
+    fill: #0c5460; /* Darker blue/cyan */
+}
+.alert-danger svg {
+    fill: #721c24; /* Darker red */
+}
