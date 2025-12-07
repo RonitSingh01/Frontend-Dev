@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>College Timetable Viewer</h2>
+
+<select id="daySelect">
+  <option>Monday</option>
+  <option>Tuesday</option>
+  <option>Wednesday</option>
+  <option>Thursday</option>
+  <option>Friday</option>
+</select>
+
+<div id="output"></div>
+
+<script>
+function loadTimetable(day) {
+    fetch("http://localhost:3005/timetable?day=" + day)
+    .then(res => res.json())
+    .then(data => {
+        if (data.length === 0) {
+            document.getElementById("output").innerHTML = "No classes today.";
+            return;
+        }
+
+        let html = "";
+        data.forEach(t => {
+            html += `<p>${t.subject} - ${t.faculty} (${t.time})</p>`;
+        });
+
+        document.getElementById("output").innerHTML = html;
+    });
+}
+
+document.getElementById("daySelect").addEventListener("change", function() {
+    loadTimetable(this.value);
+});
+
+loadTimetable("Monday");
+</script>
+
+</body>
+</html>

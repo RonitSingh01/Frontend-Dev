@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Multi API Dashboard</h2>
+
+<div id="users">Loading...</div>
+<div id="orders">Loading...</div>
+<div id="products">Loading...</div>
+<div id="warning"></div>
+
+<script>
+Promise.all([
+    fetch("http://localhost:3004/users").then(r => r.json()),
+    fetch("http://localhost:3004/orders").then(r => r.json()),
+    fetch("http://localhost:3004/products").then(r => r.json())
+]).then(([users, orders, products]) => {
+    document.getElementById("users").textContent = "Total Users: " + users.length;
+    document.getElementById("orders").textContent = "Total Orders: " + orders.length;
+    document.getElementById("products").textContent = "Total Products: " + products.length;
+}).catch(err => {
+    document.getElementById("warning").textContent = "Some data could not be loaded.";
+});
+</script>
+
+</body>
+</html>

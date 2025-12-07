@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Dashboard</title>
+</head>
+<body>
+
+<h2>Employee Status Dashboard</h2>
+<div id="empList"></div>
+
+<script>
+function loadEmployees() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://localhost:3002/employees");
+    xhr.onload = function() {
+        let data = JSON.parse(xhr.responseText);
+        let html = "";
+
+        data.forEach(emp => {
+            html += `
+              <div>
+                <strong>${emp.name}</strong>
+                <label>
+                    <input type="checkbox" 
+                           onchange="toggleStatus(${emp.id}, this)"
+                           ${emp.status === 'active' ? 'checked' : ''}>
+                    ${emp.status}
+                </label>
+              </div>
+              <hr>
+            `;
+        });
+
+        document.getElementById("empList").innerHTML = html;
+    };
+    xhr.send();
+}
+
+function toggleStatus(id, checkbox) {
+    let newStatus = checkbox.checked ? "active" : "inactive";
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("PATCH", "http://localhost:3002/employees/" + id);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            checkbox.nextSibling.textContent = newStatus;
+        } else {
+            alert("Update failed, reverting");
+            checkbox.checked = !checkbox.checked;
+        }
+    };
+
+    xhr.onerror = function() {
+        alert("Error updating status");
+        checkbox.checked = !checkbox.checked;
+    };
+
+    xhr.send(JSON.stringify({ status: newStatus }));
+}
+
+loadEmployees();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Search</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #loader { display:none; font-weight:bold; }
+    </style>
+</head>
+<body>
+
+<h2>Real-Time Live Search</h2>
+
+<input type="text" id="search" placeholder="Search products...">
+<div id="loader">Loading...</div>
+<div id="results"></div>
+
+<script>
+$(document).ready(function() {
+
+    $("#search").on("keyup", function() {
+        let query = $(this).val();
+        $("#loader").show();
+
+        $.ajax({
+            url: "http://localhost:3001/products?q=" + query,
+            method: "GET",
+            success: function(data) {
+                $("#loader").hide();
+
+                if (data.length === 0) {
+                    $("#results").html("<p>No products found</p>");
+                    return;
+                }
+
+                let html = "";
+                data.forEach(p => {
+                    html += `
+                        <div>
+                            <img src="${p.image}" width="60">
+                            <strong>${p.name}</strong> - ₹${p.price}
+                        </div>
+                        <hr>
+                    `;
+                });
+
+                $("#results").html(html);
+            }
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>

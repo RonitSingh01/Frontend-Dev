@@ -1,0 +1,16 @@
+{
+  "users": [
+    { "id": 1, "name": "Riya" },
+    { "id": 2, "name": "Aman" },
+    { "id": 3, "name": "Kavya" }
+  ],
+  "orders": [
+    { "id": 101, "amount": 2000 },
+    { "id": 102, "amount": 1500 }
+  ],
+  "products": [
+    { "id": 1, "name": "Pen" },
+    { "id": 2, "name": "Notebook" },
+    { "id": 3, "name": "Bag" }
+  ]
+}
