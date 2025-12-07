@@ -1,0 +1,5 @@
+
+body{font-family:Inter,Arial;margin:20px;background:#f7f9fc;color:#222;}
+.container{background:#fff;padding:20px;border-radius:12px;max-width:900px;margin:auto;
+box-shadow:0 4px 14px rgba(0,0,0,0.08);}
+pre{background:#f0f0f0;padding:12px;border-radius:8px;overflow:auto;}
